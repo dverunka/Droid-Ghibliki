@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_persons"
+    app:startDestination="@id/persons_destination">
+
+    <fragment
+        android:id="@+id/persons_destination"
+        android:name="cz.verunka.droid.ghibliki.views.persons.PersonsFragment"
+        android:label="Persons"
+        tools:layout="@layout/fragment_persons">
+        <action
+            android:id="@+id/action_open_person_detail"
+            app:destination="@id/person_detail_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/person_detail_destination"
+        android:name="cz.verunka.droid.ghibliki.views.persons.PersonDetailFragment"
+        android:label="Person"
+        tools:layout="@layout/fragment_person_detail" />
+
+</navigation>

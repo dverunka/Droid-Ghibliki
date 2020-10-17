@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_graph_movies"
+        android:icon="@drawable/ic_movies"
+        android:title="@string/title_movies" />
+    <item
+        android:id="@+id/nav_graph_persons"
+        android:icon="@drawable/ic_persons"
+        android:title="@string/title_persons" />
+</menu>

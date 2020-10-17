@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ghibliki</string>
+
+    <!-- bottom navigation -->
+    <string name="title_movies">Movies</string>
+    <string name="title_persons">Persons</string>
+</resources>
