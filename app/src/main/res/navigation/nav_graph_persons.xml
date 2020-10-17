@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/persons_destination"
         android:name="cz.verunka.droid.ghibliki.views.persons.PersonsFragment"
-        android:label="Persons"
+        android:label="@string/title_persons"
         tools:layout="@layout/fragment_persons">
         <action
             android:id="@+id/action_open_person_detail"

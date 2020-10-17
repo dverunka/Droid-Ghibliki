@@ -1,4 +1,4 @@
-package cz.verunka.droid.ghibliki.services.utils
+package cz.verunka.droid.ghibliki.services.extensions
 
 import android.content.Intent
 import android.util.SparseArray

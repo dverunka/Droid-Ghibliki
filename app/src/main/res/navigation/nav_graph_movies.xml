@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/movies_destination"
         android:name="cz.verunka.droid.ghibliki.views.movies.MoviesFragment"
-        android:label="Movies"
+        android:label="@string/title_movies"
         tools:layout="@layout/fragment_movies">
         <action
             android:id="@+id/action_open_movie_detail"

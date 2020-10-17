@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">Ghibliki</string>
+    <string name="app_name">Ghibli wiki</string>
 
     <!-- bottom navigation -->
     <string name="title_movies">Movies</string>
-    <string name="title_persons">Persons</string>
+    <string name="title_persons">People</string>
+
+    <string name="no_network_connectivity">No Network Connectivity</string>
 </resources>

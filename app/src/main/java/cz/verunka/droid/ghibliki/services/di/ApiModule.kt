@@ -10,5 +10,5 @@ val apiModule = module {
         return retrofit.create(GhibliApi::class.java)
     }
 
-    single { provideGhibliApi(get()) }
+    single { provideGhibliApi(retrofit = get()) }
 }

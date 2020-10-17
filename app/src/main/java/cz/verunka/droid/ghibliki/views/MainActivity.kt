@@ -9,7 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import cz.verunka.droid.ghibliki.R
 import cz.verunka.droid.ghibliki.databinding.ActivityMainBinding
-import cz.verunka.droid.ghibliki.services.utils.setupWithNavController
+import cz.verunka.droid.ghibliki.services.extensions.setupWithNavController
 
 class MainActivity : AppCompatActivity() {
 

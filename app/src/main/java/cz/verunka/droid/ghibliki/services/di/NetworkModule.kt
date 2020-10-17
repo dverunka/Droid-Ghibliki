@@ -45,6 +45,6 @@ val networkModule = module {
 
     single {
         val baseUrl = androidContext().getString(R.string.BASE_URL)
-        provideRetrofit(get(), baseUrl)
+        provideRetrofit(client = get(), baseUrl = baseUrl)
     }
 }

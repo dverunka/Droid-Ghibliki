@@ -31,11 +31,11 @@ val databaseModule = module {
         return  database.personsDAO
     }
 
-    single { provideMoviesDatabase(androidApplication()) }
-    single { providePersonsDatabase(androidApplication()) }
+    single { provideMoviesDatabase(application = androidApplication()) }
+    single { providePersonsDatabase(application = androidApplication()) }
 
-    single { provideMoviesDao(get()) }
-    single { providePersonsDao(get()) }
+    single { provideMoviesDao(database = get()) }
+    single { providePersonsDao(database = get()) }
 
 
 }
