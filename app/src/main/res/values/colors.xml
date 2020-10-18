@@ -3,4 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="normalText">#666666</color>
+    <color name="headerText">#000000</color>
+    <color name="softText">#999999</color>
 </resources>

@@ -33,6 +33,10 @@ android {
         enabled = true
     }
 
+    androidExtensions {
+        experimental = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -66,9 +70,9 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
 
     // koin DI
-    implementation 'org.koin:koin-android:2.0.1'
+    implementation 'org.koin:koin-android:2.0.0-rc-2'
     implementation 'org.koin:koin-android-viewmodel:2.0.0-rc-2'
-    implementation 'org.koin:koin-androidx-scope:2.0.1'
+    implementation 'org.koin:koin-androidx-scope:2.0.0-rc-2'
 
     // room ORM
     implementation 'androidx.room:room-runtime:2.2.5'

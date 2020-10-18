@@ -19,13 +19,10 @@ class MoviesViewModel(private val repo: IGhibliRepository): ViewModel() {
     fun getAllMovies() {
 
         showLoading.set(true)
-
         viewModelScope.launch {
 
             val result =  repo.getAllMovies()
-
             showLoading.set(false)
-
             when (result) {
 
                 is AppResult.Success -> {

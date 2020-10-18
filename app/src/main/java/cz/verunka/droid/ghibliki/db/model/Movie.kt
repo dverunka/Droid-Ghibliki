@@ -16,6 +16,6 @@ class Movie (
     val description: String,
     val director: String,
     val producer: String,
-    val release_date: Int, // year
+    val release_date: String, // year
 
 ): Parcelable

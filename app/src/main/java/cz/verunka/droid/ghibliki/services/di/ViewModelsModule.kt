@@ -5,9 +5,9 @@ import cz.verunka.droid.ghibliki.viewmodels.PersonsViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-val viewModelModule = module {
+val viewModelsModule = module {
 
     viewModel { MoviesViewModel(repo = get()) }
 
-    viewModel { PersonsViewModel(repo = get()) }
+    // viewModel { PersonsViewModel(repo = get()) }
 }
