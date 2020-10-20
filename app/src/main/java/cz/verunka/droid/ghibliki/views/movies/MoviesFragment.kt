@@ -11,13 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import cz.verunka.droid.ghibliki.R
 import cz.verunka.droid.ghibliki.databinding.FragmentMoviesBinding
 import cz.verunka.droid.ghibliki.db.model.Movie
-import cz.verunka.droid.ghibliki.services.extensions.replaceFragment
 import cz.verunka.droid.ghibliki.viewmodels.MoviesViewModel
-import cz.verunka.droid.ghibliki.views.MainActivity
 import kotlinx.android.synthetic.main.fragment_movies.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class MoviesFragment: Fragment(), MovieClickListener {
+class MoviesFragment: Fragment(), IMovieClickListener {
 
     private val moviesViewModel by viewModel<MoviesViewModel>()
     private lateinit var movieAdapter: MovieAdapter

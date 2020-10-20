@@ -2,7 +2,7 @@ package cz.verunka.droid.ghibliki.views.movies
 
 import cz.verunka.droid.ghibliki.db.model.Movie
 
-interface MovieClickListener {
+interface IMovieClickListener {
 
     fun onItemClick(movie: Movie)
 }

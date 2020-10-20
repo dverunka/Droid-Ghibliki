@@ -9,7 +9,7 @@ import cz.verunka.droid.ghibliki.R
 import cz.verunka.droid.ghibliki.databinding.RowMovieBinding
 import cz.verunka.droid.ghibliki.db.model.Movie
 
-class MovieAdapter(val context: Context?, val clickListener: MovieClickListener): RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
+class MovieAdapter(val context: Context?, val clickListener: IMovieClickListener): RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     var movieList: List<Movie> = ArrayList()
 
