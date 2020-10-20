@@ -8,12 +8,12 @@
         <import type="android.view.View" />
 
         <variable
-            name="movie"
-            type="cz.verunka.droid.ghibliki.db.model.Movie" />
+            name="person"
+            type="cz.verunka.droid.ghibliki.db.model.Person" />
 
         <variable
-            name="iMovieClick"
-            type="cz.verunka.droid.ghibliki.views.movies.IMovieClickListener" />
+            name="iPersonClick"
+            type="cz.verunka.droid.ghibliki.views.persons.IPersonClickListener" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,7 +23,7 @@
         android:layout_marginTop="@dimen/appbar_padding_top"
         android:layout_marginEnd="@dimen/appbar_padding_top"
         card_view:cardElevation="@dimen/appbar_elevation"
-        android:onClick="@{() -> iMovieClick.onItemClick(movie)}"
+        android:onClick="@{() -> iPersonClick.onItemClick(person)}"
         card_view:layout_constraintEnd_toEndOf="parent"
         card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toTopOf="parent">
@@ -34,29 +34,29 @@
             android:padding="@dimen/appbar_padding_top">
 
             <TextView
-                android:id="@+id/movie_title"
+                android:id="@+id/person_name"
                 style="@style/normal_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{movie.title}"
+                android:text="@{person.name}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Title" />
+                tools:text="Name" />
 
             <TextView
-                android:id="@+id/movie_year"
+                android:id="@+id/person_age"
                 style="@style/small_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/appbar_padding_top"
-                android:text="@{movie.release_date}"
+                android:text="@{person.age}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/movie_title"
-                tools:text="Release year" />
+                app:layout_constraintTop_toBottomOf="@id/person_name"
+                tools:text="Age" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

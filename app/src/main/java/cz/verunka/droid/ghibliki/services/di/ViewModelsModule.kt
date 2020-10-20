@@ -9,5 +9,5 @@ val viewModelsModule = module {
 
     viewModel { MoviesViewModel(repo = get()) }
 
-    // viewModel { PersonsViewModel(repo = get()) }
+    viewModel { PersonsViewModel(repo = get()) }
 }
