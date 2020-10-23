@@ -57,8 +57,8 @@ class PersonsFragment: Fragment(), IPersonClickListener {
 
     override fun onItemClick(person : Person) {
 
-        /*val bundle = Bundle()
+        val bundle = Bundle()
         bundle.putParcelable("person_detail", person)
-        findNavController().navigate(R.id.person_detail_destination, bundle)*/
+        findNavController().navigate(R.id.person_detail_destination, bundle)
     }
 }

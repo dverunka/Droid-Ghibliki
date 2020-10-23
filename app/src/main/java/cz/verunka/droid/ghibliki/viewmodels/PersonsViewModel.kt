@@ -19,11 +19,9 @@ class PersonsViewModel(private val repo: IGhibliRepository): ViewModel() {
     fun getAllPersons() {
 
         showLoading.set(true)
-
         viewModelScope.launch {
 
             val result =  repo.getAllPersons()
-
             showLoading.set(false)
 
             when (result) {

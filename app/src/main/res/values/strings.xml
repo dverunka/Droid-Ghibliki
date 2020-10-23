@@ -6,4 +6,6 @@
     <string name="title_persons">People</string>
 
     <string name="no_network_connectivity">No Network Connectivity</string>
+
+    <string name="icon_year">year icon</string>
 </resources>
