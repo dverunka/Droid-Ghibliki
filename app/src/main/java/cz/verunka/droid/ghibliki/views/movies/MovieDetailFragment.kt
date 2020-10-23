@@ -20,7 +20,7 @@ class MovieDetailFragment: Fragment() {
         @JvmStatic
         fun newInstance(data: Movie) = MovieDetailFragment().apply {
             arguments = Bundle().apply {
-                putParcelable("movie_row", data)
+                putParcelable("movie_detail", data)
             }
         }
     }
@@ -31,7 +31,7 @@ class MovieDetailFragment: Fragment() {
     override fun onAttach(context: Context) {
 
         super.onAttach(context)
-        movie =  arguments?.getParcelable("movie_row")
+        movie = arguments?.getParcelable("movie_detail")
         Log.d(TAG, movie?.title.toString())
     }
 

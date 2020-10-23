@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import cz.verunka.droid.ghibliki.R
 import cz.verunka.droid.ghibliki.databinding.FragmentMoviesBinding
 import cz.verunka.droid.ghibliki.db.model.Movie
 import cz.verunka.droid.ghibliki.viewmodels.MoviesViewModel
+import cz.verunka.droid.ghibliki.views.MainActivity
 import kotlinx.android.synthetic.main.fragment_movies.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -56,6 +58,8 @@ class MoviesFragment: Fragment(), IMovieClickListener {
 
     override fun onItemClick(movie : Movie) {
 
-        // (activity as MainActivity).replaceFragment(MovieDetailFragment.newInstance(movie), R.id.movies_fragment, "movie_detail")
+        val bundle = Bundle()
+        bundle.putParcelable("movie_detail", movie)
+        findNavController().navigate(R.id.movie_detail_destination, bundle)
     }
 }
