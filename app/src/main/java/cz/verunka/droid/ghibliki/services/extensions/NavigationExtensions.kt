@@ -17,7 +17,6 @@ import cz.verunka.droid.ghibliki.R
  * source: github.com/android/architecture-components-samples/blob/master/NavigationAdvancedSample
  */
 fun BottomNavigationView.setupWithNavController(
-
     navGraphIds: List<Int>,
     fragmentManager: FragmentManager,
     containerId: Int,
@@ -86,8 +85,7 @@ fun BottomNavigationView.setupWithNavController(
                     firstFragmentTag,
                     FragmentManager.POP_BACK_STACK_INCLUSIVE
                 )
-                val selectedFragment = fragmentManager.findFragmentByTag(newlySelectedItemTag)
-                        as NavHostFragment
+                val selectedFragment = fragmentManager.findFragmentByTag(newlySelectedItemTag) as NavHostFragment
 
                 // Exclude the first fragment tag because it's always in the back stack.
                 if (firstFragmentTag != newlySelectedItemTag) {
@@ -151,13 +149,7 @@ fun BottomNavigationView.setupWithNavController(
 
 private fun getFragmentTag(index: Int) = "bottomNavigation#$index"
 
-private fun obtainNavHostFragment(
-
-    fragmentManager: FragmentManager,
-    fragmentTag: String,
-    navGraphId: Int,
-    containerId: Int
-): NavHostFragment {
+private fun obtainNavHostFragment(fragmentManager: FragmentManager, fragmentTag: String, navGraphId: Int, containerId: Int): NavHostFragment {
 
     // If the Nav Host fragment exists, return it
     val existingFragment = fragmentManager.findFragmentByTag(fragmentTag) as NavHostFragment?
@@ -171,12 +163,8 @@ private fun obtainNavHostFragment(
     return navHostFragment
 }
 
-private fun attachNavHostFragment(
+private fun attachNavHostFragment(fragmentManager: FragmentManager, navHostFragment: NavHostFragment, isPrimaryNavFragment: Boolean) {
 
-    fragmentManager: FragmentManager,
-    navHostFragment: NavHostFragment,
-    isPrimaryNavFragment: Boolean
-) {
     fragmentManager.beginTransaction()
         .attach(navHostFragment)
         .apply {
@@ -187,21 +175,15 @@ private fun attachNavHostFragment(
         .commitNow()
 }
 
-private fun detachNavHostFragment(
+private fun detachNavHostFragment(fragmentManager: FragmentManager, navHostFragment: NavHostFragment) {
 
-    fragmentManager: FragmentManager,
-    navHostFragment: NavHostFragment
-) {
     fragmentManager.beginTransaction()
         .detach(navHostFragment)
         .commitNow()
 }
 
-private fun BottomNavigationView.setupItemReselected(
+private fun BottomNavigationView.setupItemReselected(graphIdToTagMap: SparseArray<String>, fragmentManager: FragmentManager) {
 
-    graphIdToTagMap: SparseArray<String>,
-    fragmentManager: FragmentManager
-) {
     setOnNavigationItemReselectedListener { item ->
 
         val newlySelectedItemTag = graphIdToTagMap[item.itemId]
@@ -216,7 +198,6 @@ private fun BottomNavigationView.setupItemReselected(
 }
 
 private fun BottomNavigationView.setupDeepLinks(
-
     navGraphIds: List<Int>,
     fragmentManager: FragmentManager,
     containerId: Int,
