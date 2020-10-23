@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import cz.verunka.droid.ghibliki.R
 import cz.verunka.droid.ghibliki.databinding.FragmentPersonsBinding
@@ -56,6 +57,8 @@ class PersonsFragment: Fragment(), IPersonClickListener {
 
     override fun onItemClick(person : Person) {
 
-        // (activity as MainActivity).replaceFragment(PersonDetailFragment.newInstance(person), R.id.persons_fragment, "person_detail")
+        /*val bundle = Bundle()
+        bundle.putParcelable("person_detail", person)
+        findNavController().navigate(R.id.person_detail_destination, bundle)*/
     }
 }

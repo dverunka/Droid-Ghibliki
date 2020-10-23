@@ -19,10 +19,11 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/appbar_padding_top"
-        android:layout_marginTop="@dimen/appbar_padding_top"
-        android:layout_marginEnd="@dimen/appbar_padding_top"
-        card_view:cardElevation="@dimen/appbar_elevation"
+        android:layout_marginStart="@dimen/padding_8"
+        android:layout_marginEnd="@dimen/padding_8"
+        android:layout_marginTop="@dimen/padding_4"
+        android:layout_marginBottom="@dimen/padding_4"
+        card_view:cardElevation="@dimen/padding_2"
         android:onClick="@{() -> iPersonClick.onItemClick(person)}"
         card_view:layout_constraintEnd_toEndOf="parent"
         card_view:layout_constraintStart_toStartOf="parent"
@@ -31,7 +32,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/appbar_padding_top">
+            android:padding="@dimen/padding_8">
 
             <TextView
                 android:id="@+id/person_name"
@@ -50,7 +51,7 @@
                 style="@style/small_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/appbar_padding_top"
+                android:layout_marginTop="@dimen/padding_8"
                 android:text="@{person.age}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"

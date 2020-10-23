@@ -14,16 +14,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/padding_8"
+        android:layout_marginEnd="@dimen/padding_8">
 
         <TextView
             android:id="@+id/detail_movie_title"
             style="@style/header_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/appbar_padding_top"
-            android:layout_marginEnd="@dimen/appbar_padding_top"
-            android:layout_marginTop="@dimen/appbar_padding"
+            android:layout_marginTop="@dimen/padding_8"
             android:text="@{movie.title}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -32,13 +32,11 @@
             tools:text="Header" />
 
         <TextView
-            android:id="@+id/country_currency_text"
+            android:id="@+id/detail_movie_description"
             style="@style/normal_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/appbar_padding_top"
-            android:layout_marginEnd="@dimen/appbar_padding_top"
-            android:layout_marginTop="@dimen/appbar_padding_top"
+            android:layout_marginTop="@dimen/padding_8"
             android:text="@{movie.description}"
             app:layout_constraintTop_toBottomOf="@id/detail_movie_title"
             app:layout_constraintEnd_toEndOf="parent"
